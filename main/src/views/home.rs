@@ -5,8 +5,11 @@ use std::time::Instant;
 #[cfg(feature = "web")]
 use web_time::Instant;
 
-const MAIN_JS: Asset = asset!("/assets/js/main.js", AssetOptions::js().with_minify(false));
-//const MAIN_JS: Asset = asset!("/assets/js/main.js");
+const KICK_WORKER_JS: Asset = asset!(
+    "/assets/js/kick-worker.js",
+    AssetOptions::js().with_minify(false)
+);
+//const MAIN_JS: Asset = asset!("/assets/js/kick-worker.js");
 
 // This is necessary. Without it, `dx build --web --release` will not copy `worker.jp`.
 const _PKG_WORKER_JS: Asset = asset!(
@@ -27,9 +30,8 @@ pub fn Home() -> Element {
     let fibo40_r = use_signal(|| 0);
     let fibo41_r = use_signal(|| 0);
 
-    //    document::Script { src: MAIN_JS }
     rsx! {
-        script { r#type: "module", src: MAIN_JS }
+        script { r#type: "module", src: KICK_WORKER_JS }
         div { " " }
         div {
             button {

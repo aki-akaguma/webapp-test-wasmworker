@@ -1,0 +1,49 @@
+[package]
+name = "test-wasmworker"
+version = "0.1.0"
+authors = ["aki <aki.akaguma@hotmail.com>"]
+edition = "2021"
+description = """
+Sample of wasm worker
+"""
+keywords = ["webapp"]
+categories = ["desktop", "android"]
+#license = "MIT OR Apache-2.0"
+readme = "README.md"
+build = "build.rs"
+rust-version = "1.90.0"
+repository = "https://github.com/aki-akaguma/webapp-test-wasmworker"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+dioxus = { version = "0.7.3", features = ["router", "fullstack"] }
+dioxus-logger = "0.7.3"
+console_error_panic_hook = "0.1"
+
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0" }
+
+web-time = { version="1.1.0", optional=true }
+
+tower = { version = "0.5", optional = true }
+tower-http = { version = "0.6", features = ["set-header"], optional = true }
+http = { version = "1.4", optional = true }
+
+wasm-worker = { path="../wasm-worker" }
+
+[target.'cfg(target_os = "android")'.dependencies]
+openssl = { version = "0.10", features = ["vendored"] }
+
+[build-dependencies]
+rust-version-info-file = "0.2"
+
+[features]
+default = ["web"]
+
+web = ["dioxus/web","dep:web-time"]
+desktop = ["dioxus/desktop"]
+mobile = ["dioxus/mobile"]
+server = ["dioxus/server", "dep:tower", "dep:tower-http", "dep:http"]
+
+debian_build = []

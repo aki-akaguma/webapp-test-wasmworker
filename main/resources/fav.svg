@@ -1,0 +1,42 @@
+<svg width="250" height="250" viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Soft Background Glow -->
+  <circle cx="125" cy="125" r="115" fill="#F0F4C3" opacity="0.5" />
+  
+  <!-- Main Body (Rounded and Friendly) -->
+  <rect x="60" y="80" width="130" height="110" rx="40" fill="#81C784" />
+  
+  <!-- White Face Area -->
+  <rect x="75" y="95" width="100" height="60" rx="25" fill="#FFFFFF" />
+  
+  <!-- Large, Expressive Eyes -->
+  <circle cx="100" cy="120" r="12" fill="#2E7D32" />
+  <circle cx="150" cy="120" r="12" fill="#2E7D32" />
+  
+  <!-- Eye Highlights (Sparkles) -->
+  <circle cx="104" cy="116" r="4" fill="#FFFFFF" />
+  <circle cx="154" cy="116" r="4" fill="#FFFFFF" />
+  
+  <!-- Cute Blush -->
+  <circle cx="85" cy="140" r="6" fill="#F8BBD0" />
+  <circle cx="165" cy="140" r="6" fill="#F8BBD0" />
+  
+  <!-- Small Smile -->
+  <path d="M 115 145 Q 125 152 135 145" stroke="#2E7D32" stroke-width="3" fill="none" stroke-linecap="round" />
+  
+  <!-- Antenna with Glow -->
+  <line x1="125" y1="80" x2="125" y2="50" stroke="#388E3C" stroke-width="6" stroke-linecap="round" />
+  <circle cx="125" cy="45" r="10" fill="#FFEB3B" />
+  <circle cx="125" cy="45" r="15" fill="#FFEB3B" opacity="0.3" />
+  
+  <!-- The 'T' Symbol (as a proud badge on the chest) -->
+  <rect x="105" y="165" width="40" height="45" rx="10" fill="#FFC107" stroke="#FFA000" stroke-width="3" />
+  <path d="M 112 175 H 138 M 125 175 V 200" stroke="#5D4037" stroke-width="6" stroke-linecap="round" />
+  
+  <!-- Tiny Arms -->
+  <circle cx="50" cy="135" r="12" fill="#A5D6A7" />
+  <circle cx="200" cy="135" r="12" fill="#A5D6A7" />
+  
+  <!-- Tiny Feet -->
+  <rect x="85" y="185" width="25" height="15" rx="7" fill="#388E3C" />
+  <rect x="140" y="185" width="25" height="15" rx="7" fill="#388E3C" />
+</svg>

@@ -7,8 +7,7 @@ use serde::{Deserialize, Serialize};
 //use wasmworker::{webworker, worker_pool};
 //use wasmworker::{webworker_channel, Channel};
 //use wasmworker_proc_macro::webworker_channel_fn;
-use wasmworker::webworker;
-use wasmworker_proc_macro::webworker_fn;
+use wasmworker::{webworker, webworker_fn};
 //use wasmworker::*;
 //use wasmworker_proc_macro::*;
 

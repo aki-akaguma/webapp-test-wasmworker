@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * profile.release: opt-level = "s"
 * updated crates: dioxus(0.7.5), wasmworker(0.4.0)
 
+### Fixed
+* `dx bundle --desktop --release --package-types appimage` on `Makefile`
+
 
 ## [0.1.0] (2026-03-08)
 ### Added

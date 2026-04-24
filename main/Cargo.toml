@@ -17,19 +17,23 @@ repository = "https://github.com/aki-akaguma/webapp-test-wasmworker"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-dioxus = { version = "0.7.5", features = ["router", "fullstack"] }
-dioxus-logger = "0.7.4"
-console_error_panic_hook = "0.1"
+# dioxus family
+dioxus = { version = "0.7.6", features = ["router", "fullstack"] }
 
+# what dioxus depends on
 serde = { version = "1.0", features = ["derive"] }
-serde_json = { version = "1.0" }
 
-web-time = { version="1.1.0", optional=true }
+# what dioxus depends on, optional
 
+# other, optional
+console_error_panic_hook = { version = "0.1", optional = true }
+http = { version = "1.4", optional = true }
 tower = { version = "0.5", optional = true }
 tower-http = { version = "0.6", features = ["set-header"], optional = true }
-http = { version = "1.4", optional = true }
+web-time = { version="1.1.0", optional=true }
 
+# other
+serde_json = { version = "1.0" }
 wasm-worker = { path="../wasm-worker" }
 
 [target.'cfg(target_os = "android")'.dependencies]
@@ -41,7 +45,7 @@ rust-version-info-file = "0.2"
 [features]
 default = ["web"]
 
-web = ["dioxus/web","dep:web-time"]
+web = ["dioxus/web", "dep:console_error_panic_hook", "dep:web-time"]
 desktop = ["dioxus/desktop"]
 mobile = ["dioxus/mobile"]
 server = ["dioxus/server", "dep:tower", "dep:tower-http", "dep:http"]

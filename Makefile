@@ -26,7 +26,10 @@ clean:
 	cargo clean
 
 check:
-	cargo check
+	make -C $(MAIN_BASE) check
+
+clippy:
+	make -C $(MAIN_BASE) clippy
 
 build-worker:
 	make -C $(WASM_WORKER_BASE) build

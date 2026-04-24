@@ -7,8 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
+* I reorganized the dependencies in `Cargo.toml`.
+* update crate: dioxus(0.7.6)
 * profile.release: opt-level = "s"
-* updated crates: dioxus(0.7.5), wasmworker(0.4.0)
+* update crate: wasmworker(0.4.0)
 
 ### Fixed
 * `dx bundle --desktop --release --package-types appimage` on `Makefile`

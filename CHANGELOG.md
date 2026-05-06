@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 * update crate: dioxus(0.7.7)
 
+### Fixed
+* `clippy::needless\_return`
+
 
 ## [0.1.2] (2026-04-27)
 ### Changed

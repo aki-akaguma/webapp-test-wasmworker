@@ -105,13 +105,13 @@ fn calc_proc(arg: &[i32]) -> i32 {
 }
 
 fn calc_add(a: i32, b: i32) -> i32 {
-    return a + b;
+    a + b
 }
 
 fn calc_fibonacci(num: i32) -> i32 {
-    return match num {
+    match num {
         0 => 0,
         1 => 1,
         _ => calc_fibonacci(num - 1) + calc_fibonacci(num - 2),
-    };
+    }
 }

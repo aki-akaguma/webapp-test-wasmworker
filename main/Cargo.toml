@@ -18,7 +18,7 @@ repository = "https://github.com/aki-akaguma/webapp-test-wasmworker"
 
 [dependencies]
 # dioxus family
-dioxus = { version = "0.7.6", features = ["router", "fullstack"] }
+dioxus = { version = "0.7.7", features = ["router", "fullstack"] }
 
 # what dioxus depends on
 serde = { version = "1.0", features = ["derive"] }

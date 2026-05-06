@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * update crate: dioxus(0.7.7)
 
 ### Fixed
+* `clippy::needless\_range\_loop`
 * `clippy::needless\_return`
 
 

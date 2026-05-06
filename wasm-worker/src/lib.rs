@@ -30,8 +30,8 @@ pub async fn run_single(arg: String) -> String {
     //
     let ret = a.p1.iter().map(|v| calc_proc(v)).collect::<Vec<i32>>();
     //
-    for i in 0..ret.len() {
-        a.p1[i].push(ret[i]);
+    for (i, &b) in ret.iter().enumerate() {
+        a.p1[i].push(b);
     }
     //
     RunRet {
@@ -51,8 +51,8 @@ pub async fn run_pool(arg: String) -> String {
     //
     let ret = a.p1.iter().par_map(webworker!(worker_proc)).await;
     //log::info!("par_map: {ret:?}");
-    for i in 0..ret.len() {
-        a.p1[i].push(ret[i]);
+    for (i, &b) in ret.iter().enumerate() {
+        a.p1[i].push(b);
     }
     //
     RunRet {
